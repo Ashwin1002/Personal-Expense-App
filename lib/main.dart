@@ -4,6 +4,7 @@ import 'package:personal_expense_planner/widgets/new_transaction.dart';
 import './models/transaction.dart';
 import './widgets/new_transaction.dart';
 import './widgets/transaction_list.dart';
+import './widgets/chart.dart';
 
 void main() {
   runApp(MyApp());
@@ -51,6 +52,16 @@ class _MyHomePageState extends State<MyHomePage> {
         expenses: 40.64,
         dateTime: DateTime.now()),*/
   ];
+  
+  List<Transaction> get _recentTransactions {
+    return _userTransactions.where((tx){
+      return tx.dateTime.isAfter(
+          DateTime.now().subtract(
+              Duration(days: 7),
+          )
+      );
+    }).toList();
+  }
 
   void _addNewTransaction(String txTitle, double txAmount) {
     final newTx = Transaction(
@@ -96,21 +107,7 @@ class _MyHomePageState extends State<MyHomePage> {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              Container(
-                width: double.infinity,
-                height: 50.0,
-                child: Card(
-                  child: Text(
-                    'Chart',
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                    ),
-                    textAlign: TextAlign.center,
-                  ),
-                  elevation: 5,
-                  color: Colors.blue,
-                ),
-              ),
+              Chart(_recentTransactions),
               TransactionList(_userTransactions)
             ]),
       ),
