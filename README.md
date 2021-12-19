@@ -19,10 +19,13 @@ samples, guidance on mobile development, and a full API reference.
 ## ScreenShots
 
 When there are no transactions:
+<br>
 <img src = "https://user-images.githubusercontent.com/47735067/146673098-d542f791-8d04-4dc5-a9d3-a88a93b5467e.png" width = "300">
 <br>
 <hr>
 <hr>
+<br>
 When there are transactions done:
+<br>
 <img src = " https://user-images.githubusercontent.com/47735067/146673207-a9b17b1f-0559-42b3-899a-ecb74f349364.png" width = "300">
 <br>
