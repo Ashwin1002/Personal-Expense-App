@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:personal_expense_planner/widgets/new_transaction.dart';
 
 import './models/transaction.dart';
+import './widgets/chart.dart';
 import './widgets/new_transaction.dart';
 import './widgets/transaction_list.dart';
-import './widgets/chart.dart';
 
 void main() {
   runApp(MyApp());
@@ -21,11 +21,16 @@ class MyApp extends StatelessWidget {
           accentColor: Colors.amber,
           fontFamily: 'Quicksand',
           textTheme: ThemeData.light().textTheme.copyWith(
-            headline6 : TextStyle(fontFamily: 'OpenSans', fontWeight: FontWeight.bold, fontSize: 18)
-          ),
+              headline6: const TextStyle(
+                  fontFamily: 'OpenSans',
+                  fontWeight: FontWeight.bold,
+                  fontSize: 18),
+              button: const TextStyle(
+                color: Colors.white,
+              )),
           appBarTheme: AppBarTheme(
               textTheme: ThemeData.light().textTheme.copyWith(
-                 headline6 : TextStyle(
+                  headline6: const TextStyle(
                       fontFamily: 'OpenSans',
                       fontSize: 20,
                       fontWeight: FontWeight.bold)))),
@@ -52,20 +57,22 @@ class _MyHomePageState extends State<MyHomePage> {
         expenses: 40.64,
         dateTime: DateTime.now()),*/
   ];
-  
+
   List<Transaction> get _recentTransactions {
-    return _userTransactions.where((tx){
-      return tx.dateTime.isAfter(
-          DateTime.now().subtract(
-              Duration(days: 7),
-          )
-      );
+    return _userTransactions.where((tx) {
+      return tx.dateTime.isAfter(DateTime.now().subtract(
+        Duration(days: 7),
+      ));
     }).toList();
   }
 
-  void _addNewTransaction(String txTitle, double txAmount) {
+  void _addNewTransaction(
+      String txTitle, double txAmount, DateTime chosenDate) {
     final newTx = Transaction(
-        id: 1002, title: txTitle, expenses: txAmount, dateTime: DateTime.now());
+        id: DateTime.now().toString(),
+        title: txTitle,
+        expenses: txAmount,
+        dateTime: chosenDate);
 
     setState(() {
       _userTransactions.add(newTx);
