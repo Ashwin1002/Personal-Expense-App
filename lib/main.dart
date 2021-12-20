@@ -19,6 +19,7 @@ class MyApp extends StatelessWidget {
           //primarySwatch defines colors of different shades internally
           primarySwatch: Colors.purple,
           accentColor: Colors.amber,
+          errorColor: Colors.red,
           fontFamily: 'Quicksand',
           textTheme: ThemeData.light().textTheme.copyWith(
               headline6: const TextStyle(
@@ -84,7 +85,7 @@ class _MyHomePageState extends State<MyHomePage> {
       context: ctx,
       builder: (_) {
         /*
-        GestureDetector creates wdiget that helps to detect the gesture done
+        GestureDetector creates widget that helps to detect the gesture done
         here, HitTestBehavior
          */
         return GestureDetector(
@@ -94,6 +95,12 @@ class _MyHomePageState extends State<MyHomePage> {
         );
       },
     );
+  }
+
+  void _deleteTransaction(String id) {
+    setState(() {
+      _userTransactions.removeWhere((tx) => tx.id == id);
+    });
   }
 
   @override
@@ -115,7 +122,7 @@ class _MyHomePageState extends State<MyHomePage> {
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               Chart(_recentTransactions),
-              TransactionList(_userTransactions)
+              TransactionList(_userTransactions, _deleteTransaction)
             ]),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
