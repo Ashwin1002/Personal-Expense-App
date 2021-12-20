@@ -26,7 +26,7 @@ When there are no transactions:
 <br>
 When there are transactions done:
 <br>
-<img src = "https://user-images.githubusercontent.com/47735067/146673207-a9b17b1f-0559-42b3-899a-ecb74f349364.png" width = "300">
+<img src = "https://user-images.githubusercontent.com/47735067/146734626-98f1659e-39e1-4027-aaab-feb65072e5e3.png" width = "300">
 <br>
 <hr>
 <br>
