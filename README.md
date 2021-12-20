@@ -30,4 +30,6 @@ When there are transactions done:
 <br>
 <hr>
 <br>
+Picking Date:
+<br>
 <img src = "https://user-images.githubusercontent.com/47735067/146731033-952c6591-3f88-4727-9cde-beb71aa1a6e8.png" width = "300>
