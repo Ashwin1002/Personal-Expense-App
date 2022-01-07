@@ -39,7 +39,14 @@ samples, guidance on mobile development, and a full API reference.
 <hr>
 <br>
 
-## 4. Landscape Layout View:
+## 4. New transaction form:
+<br>
+<img src = "https://user-images.githubusercontent.com/47735067/148569360-804a602f-2d91-42e6-9aa6-b20d8c77ca4e.png" width = "300">
+<br>
+<hr>
+<br>
+
+## 5. Landscape Layout View:
 <br>
 <img src = "https://user-images.githubusercontent.com/47735067/148568464-0b559d86-78e1-4e4d-b231-4914c9b73f0d.png" width = "500">
 <br>
