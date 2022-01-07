@@ -38,5 +38,5 @@ samples, guidance on mobile development, and a full API reference.
 <br>
 ## 4. Landscape Layout View
 <br>
-<img src = "https://user-images.githubusercontent.com/47735067/148568464-0b559d86-78e1-4e4d-b231-4914c9b73f0d.png" width = "300">
+<img src = "https://user-images.githubusercontent.com/47735067/148568464-0b559d86-78e1-4e4d-b231-4914c9b73f0d.png" width = "500">
 <br>
