@@ -24,19 +24,22 @@ samples, guidance on mobile development, and a full API reference.
 <br>
 <hr>
 <br>
+
 ## 2. When there are transactions done:
 <br>
 <img src = "https://user-images.githubusercontent.com/47735067/146734626-98f1659e-39e1-4027-aaab-feb65072e5e3.png" width = "300">
 <br>
 <hr>
 <br>
+
 ## 3. Picking Date:
 <br>
 <img src = "https://user-images.githubusercontent.com/47735067/146731033-952c6591-3f88-4727-9cde-beb71aa1a6e8.png" width = "300">
 <br>
 <hr>
 <br>
-## 4. Landscape Layout View
+
+## 4. Landscape Layout View:
 <br>
 <img src = "https://user-images.githubusercontent.com/47735067/148568464-0b559d86-78e1-4e4d-b231-4914c9b73f0d.png" width = "500">
 <br>
